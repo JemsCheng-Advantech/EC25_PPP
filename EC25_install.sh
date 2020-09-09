@@ -111,9 +111,6 @@ do
 			  
 			wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_baseshield -O reconnect.sh
 				
-			wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_basehat -O reconnect.sh
-
-			  sed -i 3,9d reconnect.sh
 			  mv reconnect.sh /usr/src/
 			  sed -i "s/pi/root/" reconnect.service
 			  mv reconnect.service /etc/systemd/system/
